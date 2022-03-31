@@ -228,7 +228,8 @@ bool operator <= (Fraction f1, Fraction f2)
 }
 
 class Card {
-public:
+protected:
+	int m_rank = 6;
 	enum suit {
 		Hearts,
 		Spades,
@@ -251,6 +252,7 @@ public:
 		King = 10
 	};
 	bool pos = false;
+	value cardValue;
 public:
 	void Flip()
 	{
@@ -262,6 +264,10 @@ public:
 		{
 			pos = true;
 		}
+	}
+	int GetValue() const
+	{
+		return cardValue;
 	}
 };
 
@@ -328,6 +334,5 @@ int main()
 	cout << (fr < fr2) << endl;
 	cout << (fr >= fr2) << endl;
 	cout << (fr <= fr2) << endl;
-
 	return 0;
 }
