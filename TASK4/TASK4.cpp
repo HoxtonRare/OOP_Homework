@@ -35,7 +35,7 @@ public:
 		Clubs
 	};
 	enum value {
-		Ace,
+		Ace = 1,
 		Two,
 		Three,
 		Four,
