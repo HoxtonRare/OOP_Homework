@@ -84,7 +84,6 @@ public:
 		return this->cardValue;
 	}
 protected:
-	int m_rank = 6;
 	suit cardSuit;
 	value cardValue;
 	bool pos = false;
