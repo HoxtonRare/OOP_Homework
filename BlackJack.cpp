@@ -171,7 +171,7 @@ public:
 		else
 		{
 			char ans;
-			cout << "\nНужна ли ещё одна карта?(Y/N)" << endl;
+			cout << "\n" << name << " нужна ли ещё одна карта?(Y/N)" << endl;
 			bool corrAns = true;
 			while (corrAns)
 			{
