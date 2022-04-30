@@ -206,22 +206,22 @@ int main()
 	while (str != "Q")
 	{
 
-		direction = std::atoi(str.c_str());
+		direction = atoi(str.c_str());
 		try
 		{
 			bot.move(direction);
 		}
 		catch (OffTheField& otf)
 		{
-			std::cerr << "Ошибка. Выход на поле. Координаты: (" << otf.getX() << ',' << otf.getY() << "), направление (" << otf.getM() << ')' << std::endl;
+			cerr << "Ошибка. Выход на поле. Координаты: (" << otf.getX() << ',' << otf.getY() << "), направление (" << otf.getM() << ')' << endl;
 		}
 		catch (IllegalCommand& ic)
 		{
-			std::cerr << "Ошибка. Некорректная команда: (" << ic.getX() << ',' << ic.getY() << "), направление (" << ic.getM() << ')' << std::endl;
+			cerr << "Ошибка. Некорректная команда: (" << ic.getX() << ',' << ic.getY() << "), направление (" << ic.getM() << ')' << endl;
 		}
 
-		std::cout << "Введите направление(1 - влево | 2 - вверх | 3 - вправо | 4 - вниз | Q - выйти): ";
-		std::cin >> str;
+		cout << "Введите направление(1 - влево | 2 - вверх | 3 - вправо | 4 - вниз | Q - выйти): ";
+		cin >> str;
 	}
 	return 0;
 }
